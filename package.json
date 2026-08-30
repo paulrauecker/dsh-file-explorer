@@ -1,6 +1,6 @@
 {
   "name": "dsh-file-explorer",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "File Explorer for DeepSeek Harness: right-side resizable file tree (expand/collapse, search, syntax-highlighted preview, in-panel editing) with one-click VS Code / system file manager open",
   "type": "module",
   "main": "lib/index.js",

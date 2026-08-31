@@ -1,10 +1,12 @@
 {
   "name": "dsh-file-explorer",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "File Explorer for DeepSeek Harness: right-side resizable file tree (expand/collapse, search, syntax-highlighted preview, in-panel editing) with one-click VS Code / system file manager open",
   "type": "module",
   "main": "lib/index.js",
   "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('lib',{recursive:true,force:true})\"",
+    "build": "pnpm run clean && tsc && tsc -p tsconfig.client.json && tsdown",
     "test": "node --test"
   },
   "exports": {
@@ -51,5 +53,11 @@
     "@deepseek-ai/dsh-client-ui-conversation": "^0.0.1-rc.1",
     "@deepseek-ai/dsh-client-ui-slots": "^0.0.1-rc.1",
     "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.0",
+    "react": "^18.2.0",
+    "tsdown": "0.22.14",
+    "typescript": "^5.9.3"
   }
 }
